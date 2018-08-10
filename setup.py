@@ -1,20 +1,17 @@
 from setuptools import setup
 
 setup(
-    name='django-storage-swift',
-    version='1.2.19',
-    description='OpenStack Swift storage backend for Django',
+    name='django-storage-swift-epfl',
+    version='0.1',
+    description='OpenStack Swift storage backend for Django without cache',
     long_description=open('README.rst').read(),
-    url='https://github.com/dennisv/django-storage-swift',
-    author='Dennis Vermeulen',
-    author_email='blacktorn@gmail.com',
+    url='https://github.com/epfl-cede/django-storage-swift-epfl',
+    author='EPFL CEDE',
+    author_email='demakov.oleg@epfl.ch',
     license='MIT',
-    packages=['swift'],
+    packages=['swift-epfl'],
     install_requires=[
-        'python-swiftclient>=2.2.0',
-        'python-keystoneclient>=0.2.3',
-        'six',
-        'python-magic>=0.4.10',
+        'django-storage-swift>=1.2.15',
     ],
     zip_safe=False,
     classifiers=[
