@@ -9,12 +9,12 @@ except ImportError:
     def deconstructible(arg):
         return arg
 
+def setting(name, default=None):
+    return getattr(settings, name, default)
+
 @deconstructible
 class SwiftStorageEpfl(SwiftStorage):
     cache_headers = setting('SWIFT_CACHE_HEADERS', True)
-
-    def __init__(self, **settings):
-        self.last_headers_value = None
 
     def get_headers(self, name):
         if self.cache_headers:
