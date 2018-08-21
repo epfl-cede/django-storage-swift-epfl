@@ -19,6 +19,14 @@ class SwiftStorageEpfl(SwiftStorage):
     def __init__(self, **settings):
         self.last_headers_value = None
 
+    @property
+    def swift_conn(self):
+        return super.swift_conn()
+
+    @property
+    def base_url(self):
+        return super.base_url()
+
     def get_headers(self, name):
         if self.cache_headers:
             """
