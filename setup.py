@@ -11,7 +11,7 @@ setup(
     license='MIT',
     packages=['swift-epfl'],
     install_requires=[
-        'django-storage-swift>=1.2.15',
+        'django-storage-swift>=1.2.19',
     ],
     zip_safe=False,
     classifiers=[
